@@ -1,0 +1,292 @@
+/* 
+=============================================
+Variables
+=============================================
+*/
+:root {
+  --clr-primary: #E84855;
+  --clr-secondary: #3B341F;
+  --clr-black: #100B00;
+  --clr-white: #EFF6EE;
+  --clr-grey: #454955;
+
+  --bg-primary-color: #232323;
+
+  --border-radius: 0.625rem;
+
+  --font-family: 'Open Sans', sans-serif;
+  --fs-primary-heading: 3.5rem;
+  --fs-secondary-heading: 2rem;
+  --fs-mobile: 1.5rem;
+
+  --fs--button: 0.8125rem;
+  --btn-padding: 1rem 2rem;
+  --btn-hover: #1982C4;
+
+  --fw-800: 800;
+  --fw-700: 700;
+  --fw-600: 600;
+  --fw-500: 500;
+  --fw-400: 400;
+  --fw-300: 300;
+}
+
+/* font-family: 'Open Sans', sans-serif; */
+
+/* 
+=============================================
+Styles Reset
+=============================================
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remueve margen predeterminado */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Eliminar estilos de lista en elementos ul, ol con un rol de lista */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Smooth scrolling */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Body defaults */
+body {
+  line-height: 1.5;
+  font-family: var(--font-family);
+}
+
+/* Los elementos que no tienen una clase obtienen estilos predeterminados */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Hacer que las imágenes sean más fáciles de trabajar */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Heredar fuentes para entradas y botones */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Elimine todas las animaciones, transiciones y desplazamiento suave para las personas que prefieren no verlos */
+/* @media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+} */
+
+/* 
+=============================================
+Buttons
+=============================================
+*/
+.btn {
+  background-color: var(--clr-primary);
+  color: var(--clr-white);
+  padding: var(--btn-padding);
+  display: inline-block;
+  border: none;
+  border-radius: var(--border-radius);
+  font-weight: var(--fw-700);
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--btn-hover);
+}
+
+.selected {
+  background-color: var(--btn-hover);
+	color: var(--clr-white);
+}
+
+.btn-message {
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+}
+
+/* 
+=============================================
+Styles
+=============================================
+*/
+.header {
+  background-color: var(--bg-primary-color);
+  padding: 2.5rem 0;
+}
+
+.header__main-title {
+  color: var(--clr-white);
+  text-align: center;
+  font-size: var(--fs-mobile);
+}
+
+
+
+@media (min-width: 600px) {
+  .header__main-title{
+    font-size: var(--fs-secondary-heading);
+    font-family: var(--font-family);
+    font-weight: var(--fw-800);
+  }
+}
+
+@media (min-width: 1200px) {
+  .header__main-title{
+    font-size: var(--fs-primary-heading);
+    font-family: var(--font-family);
+    font-weight: var(--fw-800);
+  }
+}
+
+.main {
+/*   background-color: var(--bg-primary-color); */
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0.5rem;
+}
+
+.main__container {
+  text-align: center;
+}
+
+input {
+  color: var(--clr-black);
+  border-radius: var(--border-radius);
+  width: 400px;
+  max-width: 100%;
+  height: 50px;
+  outline: none;
+  border: 1px solid var(--clr-secondary);
+  font-size: 1rem;
+  padding-left: 1rem;
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+}
+
+input:hover,
+input:focus {
+  background-color: var(--clr-grey);
+  color: var(--clr-white);
+}
+
+
+.container {
+  background-color: var(--clr-white);
+  color: #1e2432;
+  height: 350px;
+  visibility: hidden;
+  margin: 50px auto;
+  width: 100%;
+}
+
+.citys {
+  padding: 0;
+}
+
+.citys__center {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.city {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: var(--fw-500);
+}
+
+.temp {
+  font-size: 1.5rem;
+  font-weight: var(--fw-300);
+}
+
+.wicon {
+  margin: 0 auto;
+}
+
+.citys__center img {
+  width: 150px;
+  height: 150px;
+  background-size: cover;
+}
+
+.description {
+  font-size: 1.5rem;
+  font-weight: var(--fw-300);
+  text-transform: capitalize;
+}
+
+
+/* 
+=============================================
+Footer
+=============================================
+*/
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 7rem;
+  background-color: var(--bg-primary-color);
+}
+
+.footer__copyright {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+.footer__copyright-text {
+  color: var(--clr-white);
+  font-weight: 600;
+  font-size: 1.2rem;
+}

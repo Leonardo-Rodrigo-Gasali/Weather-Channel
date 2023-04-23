@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Channel</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/styles/styles.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <header class="header" id="header">
+        <h1 class="header__main-title">Weather Channel</h1>
+    </header>
+
+    <main class="main">
+        <div class="main__container">
+            <input type="text" placeholder="Type your location">
+            <button class="btn">Add</button>
+        </div>
+
+        <div class="container">
+            <ul class="citys">
+                <li class="citys__center">
+                    <span class="city" id="city"></span><br>
+                    <span class="temp" id="temp"></span><span class="temp" id="degres"></span><br>
+                    <img class="wicon" id="wicon" src="" alt=""><br>
+                    <span class="description" id="description"></span>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__copyright">
+            <p class="footer__copyright-text">Copyright <span id="currYear"></span> by Leonardo Gasali</p>
+        </div>
+    </footer>
+    
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Script -->
+    <script src="assets/scripts/script.js"></script>
+</body>
+</html>
